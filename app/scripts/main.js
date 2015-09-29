@@ -1,17 +1,17 @@
-var ThingsCollection = require('models/things-collection');
+var PeopleCollection = require('models/people-collection');
 
 $(document).ready(function(){
   // prepend the contents of `app/templates/application.hbs` into `body`
   $('#container').append(JST.application());
 
-  var things = new ThingsCollection();
-  things.fetch();
-  things.on('add', renderThing);
+  var people = new PeopleCollection();
+  people.fetch();
+  people.on('add', renderPerson);
 });
 
-function renderThing(thing) {
-  // $('.js-people').append(JST.thing(thing.toJSON()));
-  var contextObj = thing.toJSON();
-  var html = JST.thing(contextObj);
+function renderPerson(person) {
+  // $('.js-people').append(JST.person(person.toJSON()));
+  var contextObj = person.toJSON();
+  var html = JST.person(contextObj);
   $('.js-people').append(html);
 }

@@ -1,10 +1,10 @@
-var Thing = Backbone.Model.extend({
+var Person = Backbone.Model.extend({
   idAttribute: '_id',
   defaults: {
     name: "[no name specified]",
-    color: "black",
+    favoriteFood: "tacos",
     created_at: Date.now()
   }
 });
 
-module.exports = Thing;
+module.exports = Person;
