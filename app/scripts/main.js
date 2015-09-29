@@ -6,11 +6,12 @@ $(document).ready(function(){
 
   var things = new ThingsCollection();
   things.fetch();
-
-  things.on('add', function(thing){
-    // $('.js-people').append(JST.thing(thing.toJSON()));
-    var contextObj = thing.toJSON();
-    var html = JST.thing(contextObj);
-    $('.js-people').append(html);
-  });
+  things.on('add', renderThing);
 });
+
+function renderThing(thing) {
+  // $('.js-people').append(JST.thing(thing.toJSON()));
+  var contextObj = thing.toJSON();
+  var html = JST.thing(contextObj);
+  $('.js-people').append(html);
+}
