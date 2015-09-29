@@ -8,6 +8,9 @@ $(document).ready(function(){
   things.fetch();
 
   things.on('add', function(thing){
-    console.log(thing.get('name'));
+    // $('.js-people').append(JST.thing(thing.toJSON()));
+    var contextObj = thing.toJSON();
+    var html = JST.thing(contextObj);
+    $('.js-people').append(html);
   });
 });

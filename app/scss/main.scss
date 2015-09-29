@@ -18,4 +18,20 @@ body {
   background-color: $base-background-color;
   color: $base-font-color;
   font-family: $base-font-family;
+  padding: 100px;
+}
+
+.people,
+.following {
+  min-height: 200px;
+  max-width: 40%;
+  border: 1px solid gray;
+}
+
+.people {
+  float: left;
+}
+
+.following {
+  float: right;
 }
